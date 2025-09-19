@@ -1,90 +1,6 @@
 ## Project Overview
 This project is a Sales Analytics Dashboard built with the MERN stack (MongoDB, Express.js, React, Node.js). It demonstrates skills in data aggregation, backend API development, and frontend data visualization. The application provides insights into sales data, including total revenue, average order value, top products, and historical reports over customizable date ranges.
 
-## Features
-- Date range filtering of sales data
-- Aggregated metrics: total revenue, average order value, total orders
-- Top products by sales quantity
-- Reports history displaying saved analytics
-- Responsive UI built with React and styled-components / Material-UI
-- Interactive charts using Apache ECharts
-- Backend API built with Express.js and MongoDB aggregation pipelines
-- Database seeding with realistic sample data using Faker.js
-
-## Technology Stack
-| Layer    | Technology           |
-|----------|----------------------|
-| Frontend | React, Axios, ECharts|
-| Backend  | Node.js, Express.js  |
-| Database | MongoDB, Mongoose    |
-| Styling  | Material-UI / CSS    |
-
-## Setup Instructions
-
-### Prerequisites
-- Node.js (v14+ recommended)
-- MongoDB (local or MongoDB Atlas)
-- npm or yarn package manager
-
-### Backend Setup
-1. Navigate to the backend directory:
-cd backend
-
-text
-
-2. Install dependencies:
-npm install
-
-text
-
-3. Start MongoDB server locally:
-mongod
-
-text
-
-4. Seed the database with sample data:
-node seed.js
-
-text
-
-5. Start the backend server:
-npm start
-
-text
-
-### Frontend Setup
-1. Navigate to the frontend directory:
-cd frontend
-
-text
-
-2. Install frontend dependencies:
-npm install
-
-text
-
-3. Start the React app:
-npm start
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-text
-
-### Environment Variables
-Create a `.env` file in the backend root with the following variable:
-MONGO_URI=mongodb://localhost:27017/salesdb
-PORT=5000
-
-text
-
-Update the frontend `.env` or API base URL as needed depending on deployment.
-
 ## Folder Structure
 
 project-root/
@@ -100,50 +16,74 @@ project-root/
 │ ├── public/
 ├── README.md
 
-text
+# Getting Started with Create React App
 
-## Database Schema
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-### Customer
-- name (String)
-- region (String)
-- type (String) // Individual or Business
+## Available Scripts
 
-### Product
-- name (String)
-- category (String)
-- price (Number)
+In the project directory, you can run:
 
-### Sale
-- reportDate (Date)
-- customer (ObjectId ref Customer)
-- product (ObjectId ref Product)
-- quantity (Number)
-- totalRevenue (Number)
-- region (String)
+### `npm start`
 
-### AnalyticsReport
-- startDate (Date)
-- endDate (Date)
-- totalRevenue (Number)
-- totalOrders (Number)
-- avgOrderValue (Number)
-- topProducts (Array)
-- topCustomers (Array)
-- regionWiseStats (Object)
-- categoryWiseStats (Object)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## API Endpoints
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-| Method | Endpoint                | Description                      | Params              |
-|--------|-------------------------|--------------------------------|---------------------|
-| GET    | `/api/revenue`          | Fetch revenue analytics data    | startDate, endDate  |
-| GET    | `/api/top-products`     | Fetch top products by sales     | startDate, endDate  |
-| GET    | `/api/reports`          | List historical analytics reports | N/A               |
+### `npm test`
 
-## Usage
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Use the frontend date picker to select a date range.
-- Dashboard updates revenue and order metrics in real-time.
-- View charts of top products sold in selected range.
-- Access historical reports through Report History tab.
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
